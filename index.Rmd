@@ -1,0 +1,78 @@
+---
+title       : sample rCharts
+subtitle    : 
+author      : Author
+job         : My job
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## An Example
+
+```{r setup, message = F, echo = F, cache = F}
+require(rCharts)
+knitr::opts_chunk$set(results = 'asis', cache=FALSE)
+```
+
+
+```{r}
+library(rCharts)
+library(reshape2)
+df1 <- read.table(header = TRUE, sep = ",", text = "
+Company,Total Transactions,Total Customers,Average Transaction,Percent of Total Transactions,Percent of Total Customers
+Bing,427204,34477,12,10.80,9.27
+Google,1171437,95959,12,29.61,25.79
+Yahoo,946924,72642,13,23.93,19.53
+Jelly,207923,20359,10,5.25,5.47
+Apple,275708,98880,2,6.97,26.58
+Others,927660,49703,18,23.44,13.36")
+names(df1) <- gsub("\\.", " ", names(df1))
+df1m <- melt(df1)
+n1 <- nPlot(value ~ Company, data = df1m[1:12, ], group = 'variable', type = 'multiBarChart',height=300,width=800)
+n1$chart(margin=list(left=100))
+n1$chart(color = c('blue', 'orange'))
+```
+
+---
+
+```{r}
+n1$save("n1.html")
+```
+
+<iframe src="n1.html" height=400 width=850></iframe>
+
+---
+
+```{r warning=FALSE, message=FALSE}
+h1 <- hPlot(x = "Wr.Hnd", y = "NW.Hnd", data = MASS::survey, type = c("line", 
+    "bubble", "scatter"), group = "Clap", size = "Age")
+h1$show("inline")
+```
+
+---
+
+
+```{r}
+data(economics, package = "ggplot2")
+econ <- transform(economics, date = as.character(date))
+m1 <- mPlot(x = "date", y = c("psavert", "uempmed"), type = "Line", data = econ)
+m1$set(pointSize = 0, lineWidth = 1)
+m1$save("m1.html")
+```
+
+<iframe src="m1.html" height=400 width=850></iframe>
+
+---
+
+```{r}
+mtcars.df <- data.frame( car = rownames(mtcars), mtcars )
+p1 <- dPlot(mpg ~ wt, groups = c("car","cyl"), data = mtcars.df, type = 'bubble')
+#by default dimple rCharts will assign x as a categorical/discrete axis 
+p1$xAxis( type = "addMeasureAxis" )
+p1$save("p1.html")
+```
+
+<iframe src="p1.html" height=400 width=850></iframe>
