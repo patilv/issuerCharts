@@ -39,11 +39,8 @@ n1$chart(color = c('blue', 'orange'))
 ---
 
 ```{r}
-n1$save("n1.html")
+n1$show("inline")
 ```
-
-<iframe src="n1.html" height=400 width=850></iframe>
-
 ---
 
 ```{r warning=FALSE, message=FALSE}
@@ -60,10 +57,8 @@ data(economics, package = "ggplot2")
 econ <- transform(economics, date = as.character(date))
 m1 <- mPlot(x = "date", y = c("psavert", "uempmed"), type = "Line", data = econ)
 m1$set(pointSize = 0, lineWidth = 1)
-m1$save("m1.html")
+m1$show("inline")
 ```
-
-<iframe src="m1.html" height=400 width=850></iframe>
 
 ---
 
@@ -72,7 +67,6 @@ mtcars.df <- data.frame( car = rownames(mtcars), mtcars )
 p1 <- dPlot(mpg ~ wt, groups = c("car","cyl"), data = mtcars.df, type = 'bubble')
 #by default dimple rCharts will assign x as a categorical/discrete axis 
 p1$xAxis( type = "addMeasureAxis" )
-p1$save("p1.html")
+p1$show("inline")
 ```
 
-<iframe src="p1.html" height=400 width=850></iframe>
