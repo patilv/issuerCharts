@@ -56,60 +56,38 @@ n1$save("n1.html", cdn=TRUE)
 ```r
 h1 <- hPlot(x = "Wr.Hnd", y = "NW.Hnd", data = MASS::survey, type = c("line", 
     "bubble", "scatter"), group = "Clap", size = "Age")
-h1$show("iframesrc", cdn=TRUE)
+h1$show('inline', cdn=TRUE)
 ```
 
-<iframe srcdoc=' &lt;!doctype HTML&gt;
-&lt;meta charset = &#039;utf-8&#039;&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    
-    &lt;script src=&#039;//code.jquery.com/jquery-1.9.1.min.js&#039; type=&#039;text/javascript&#039;&gt;&lt;/script&gt;
-    &lt;script src=&#039;//code.highcharts.com/highcharts.js&#039; type=&#039;text/javascript&#039;&gt;&lt;/script&gt;
-    &lt;script src=&#039;//code.highcharts.com/highcharts-more.js&quot;&#039; type=&#039;text/javascript&#039;&gt;&lt;/script&gt;
-    &lt;script src=&#039;//code.highcharts.com/modules/exporting.js&#039; type=&#039;text/javascript&#039;&gt;&lt;/script&gt;
-    
-    &lt;style&gt;
-    .rChart {
-      display: block;
-      margin-left: auto; 
-      margin-right: auto;
-      width: 800px;
-      height: 400px;
-    }  
-    &lt;/style&gt;
-    
-  &lt;/head&gt;
-  &lt;body &gt;
-    
-    &lt;div id = &#039;chart99853ed3677&#039; class = &#039;rChart highcharts&#039;&gt;&lt;/div&gt;    
-    &lt;script type=&#039;text/javascript&#039;&gt;
+
+<div id = 'chart9985c832ad' class = 'rChart highcharts'></div>
+<script type='text/javascript'>
     (function($){
         $(function () {
             var chart = new Highcharts.Chart({
- &quot;dom&quot;: &quot;chart99853ed3677&quot;,
-&quot;width&quot;:            800,
-&quot;height&quot;:            400,
-&quot;credits&quot;: {
- &quot;href&quot;: null,
-&quot;text&quot;: null 
+ "dom": "chart9985c832ad",
+"width":            800,
+"height":            400,
+"credits": {
+ "href": null,
+"text": null 
 },
-&quot;exporting&quot;: {
- &quot;enabled&quot;: false 
+"exporting": {
+ "enabled": false 
 },
-&quot;title&quot;: {
- &quot;text&quot;: null 
+"title": {
+ "text": null 
 },
-&quot;yAxis&quot;: [
+"yAxis": [
  {
- &quot;title&quot;: {
- &quot;text&quot;: &quot;NW.Hnd&quot; 
+ "title": {
+ "text": "NW.Hnd" 
 } 
 } 
 ],
-&quot;series&quot;: [
+"series": [
  {
- &quot;data&quot;: [
+ "data": [
  [
              13,
             13,
@@ -306,14 +284,14 @@ h1$show("iframesrc", cdn=TRUE)
         18.917 
 ] 
 ],
-&quot;name&quot;: &quot;Left&quot;,
-&quot;type&quot;: &quot;line&quot;,
-&quot;marker&quot;: {
- &quot;radius&quot;:              3 
+"name": "Left",
+"type": "line",
+"marker": {
+ "radius":              3 
 } 
 },
 {
- &quot;data&quot;: [
+ "data": [
  [
              14,
           13.5,
@@ -565,14 +543,14 @@ h1$show("iframesrc", cdn=TRUE)
         20.333 
 ] 
 ],
-&quot;name&quot;: &quot;Neither&quot;,
-&quot;type&quot;: &quot;bubble&quot;,
-&quot;marker&quot;: {
- &quot;radius&quot;:              3 
+"name": "Neither",
+"type": "bubble",
+"marker": {
+ "radius":              3 
 } 
 },
 {
- &quot;data&quot;: [
+ "data": [
  [
              13,
           12.5,
@@ -1309,36 +1287,31 @@ h1$show("iframesrc", cdn=TRUE)
         20.917 
 ] 
 ],
-&quot;name&quot;: &quot;Right&quot;,
-&quot;type&quot;: &quot;scatter&quot;,
-&quot;marker&quot;: {
- &quot;radius&quot;:              3 
+"name": "Right",
+"type": "scatter",
+"marker": {
+ "radius":              3 
 } 
 } 
 ],
-&quot;xAxis&quot;: [
+"xAxis": [
  {
- &quot;title&quot;: {
- &quot;text&quot;: &quot;Wr.Hnd&quot; 
+ "title": {
+ "text": "Wr.Hnd" 
 } 
 } 
 ],
-&quot;subtitle&quot;: {
- &quot;text&quot;: null 
+"subtitle": {
+ "text": null 
 },
-&quot;id&quot;: &quot;chart99853ed3677&quot;,
-&quot;chart&quot;: {
- &quot;renderTo&quot;: &quot;chart99853ed3677&quot; 
+"id": "chart9985c832ad",
+"chart": {
+ "renderTo": "chart9985c832ad" 
 } 
 });
         });
     })(jQuery);
-&lt;/script&gt;
-    
-    &lt;script&gt;&lt;/script&gt;    
-  &lt;/body&gt;
-&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  highcharts  ' id='iframe-chart99853ed3677'> </iframe>
- <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+</script>
 
 ---
 
