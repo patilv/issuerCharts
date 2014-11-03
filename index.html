@@ -66,7 +66,7 @@ df1m &lt;- melt(df1)
 <pre><code class="r">n1 &lt;- nPlot(value ~ Company, data = df1m[1:12, ], group = &#39;variable&#39;, type = &#39;multiBarChart&#39;,height=300,width=800)
 n1$chart(margin=list(left=100))
 n1$chart(color = c(&#39;blue&#39;, &#39;orange&#39;))
-n1$save(&quot;n1.html&quot;)
+n1$save(&quot;n1.html&quot;, cdn=TRUE)
 </code></pre>
 
   </article>
@@ -85,7 +85,7 @@ n1$save(&quot;n1.html&quot;)
   <article data-timings="">
     <pre><code class="r">h1 &lt;- hPlot(x = &quot;Wr.Hnd&quot;, y = &quot;NW.Hnd&quot;, data = MASS::survey, type = c(&quot;line&quot;, 
     &quot;bubble&quot;, &quot;scatter&quot;), group = &quot;Clap&quot;, size = &quot;Age&quot;)
-h1$save(&quot;h1.html&quot;)
+h1$save(&quot;h1.html&quot;, cdn=TRUE)
 </code></pre>
 
 <iframe src="h1.html" height=400 width=800></iframe>
@@ -100,7 +100,7 @@ h1$save(&quot;h1.html&quot;)
 econ &lt;- transform(economics, date = as.character(date))
 m1 &lt;- mPlot(x = &quot;date&quot;, y = c(&quot;psavert&quot;, &quot;uempmed&quot;), type = &quot;Line&quot;, data = econ)
 m1$set(pointSize = 0, lineWidth = 1)
-m1$save(&quot;m1.html&quot;)
+m1$save(&quot;m1.html&quot;, cdn=TRUE)
 </code></pre>
 
 <iframe src="m1.html" height=400 width=800></iframe>
@@ -115,7 +115,7 @@ m1$save(&quot;m1.html&quot;)
 p1 &lt;- dPlot(mpg ~ wt, groups = c(&quot;car&quot;,&quot;cyl&quot;), data = mtcars.df, type = &#39;bubble&#39;)
 #by default dimple rCharts will assign x as a categorical/discrete axis 
 p1$xAxis( type = &quot;addMeasureAxis&quot; )
-p1$save(&quot;p1.html&quot;)
+p1$save(&quot;p1.html&quot;, cdn=TRUE)
 </code></pre>
 
 <iframe src="p1.html" height=400 width=800></iframe>
