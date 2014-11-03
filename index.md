@@ -39,10 +39,15 @@ df1m <- melt(df1)
 n1 <- nPlot(value ~ Company, data = df1m[1:12, ], group = 'variable', type = 'multiBarChart',height=300,width=800)
 n1$chart(margin=list(left=100))
 n1$chart(color = c('blue', 'orange'))
-n1$save("n1.html", cdn=TRUE)
 ```
 
 ---
+
+
+```r
+n1$save("n1.html", cdn=TRUE)
+```
+
 <iframe src="n1.html" height=400 width=800></iframe>
 
 ---

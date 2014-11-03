@@ -66,7 +66,6 @@ df1m &lt;- melt(df1)
 <pre><code class="r">n1 &lt;- nPlot(value ~ Company, data = df1m[1:12, ], group = &#39;variable&#39;, type = &#39;multiBarChart&#39;,height=300,width=800)
 n1$chart(margin=list(left=100))
 n1$chart(color = c(&#39;blue&#39;, &#39;orange&#39;))
-n1$save(&quot;n1.html&quot;, cdn=TRUE)
 </code></pre>
 
   </article>
@@ -75,7 +74,10 @@ n1$save(&quot;n1.html&quot;, cdn=TRUE)
 
 <slide class="" id="slide-2" style="background:;">
   <article data-timings="">
-    <iframe src="n1.html" height=400 width=800></iframe>
+    <pre><code class="r">n1$save(&quot;n1.html&quot;, cdn=TRUE)
+</code></pre>
+
+<iframe src="n1.html" height=400 width=800></iframe>
 
   </article>
   <!-- Presenter Notes -->
