@@ -34,31 +34,31 @@ df1m <- melt(df1)
 n1 <- nPlot(value ~ Company, data = df1m[1:12, ], group = 'variable', type = 'multiBarChart',height=300,width=800)
 n1$chart(margin=list(left=100))
 n1$chart(color = c('blue', 'orange'))
+n1$save("n1.html")
 ```
 
 ---
+<iframe src="n1.html" height=400 width=800></iframe>
 
-```{r}
-n1$show("inline")
-```
 ---
 
 ```{r warning=FALSE, message=FALSE}
 h1 <- hPlot(x = "Wr.Hnd", y = "NW.Hnd", data = MASS::survey, type = c("line", 
     "bubble", "scatter"), group = "Clap", size = "Age")
-h1$show("inline")
+h1$save("h1.html")
 ```
+<iframe src="h1.html" height=400 width=800></iframe>
 
 ---
-
 
 ```{r}
 data(economics, package = "ggplot2")
 econ <- transform(economics, date = as.character(date))
 m1 <- mPlot(x = "date", y = c("psavert", "uempmed"), type = "Line", data = econ)
 m1$set(pointSize = 0, lineWidth = 1)
-m1$show("inline")
+m1$save("m1.html")
 ```
+<iframe src="m1.html" height=400 width=800></iframe>
 
 ---
 
@@ -67,6 +67,7 @@ mtcars.df <- data.frame( car = rownames(mtcars), mtcars )
 p1 <- dPlot(mpg ~ wt, groups = c("car","cyl"), data = mtcars.df, type = 'bubble')
 #by default dimple rCharts will assign x as a categorical/discrete axis 
 p1$xAxis( type = "addMeasureAxis" )
-p1$show("inline")
+p1$save("p1.html")
 ```
+<iframe src="p1.html" height=400 width=800></iframe>
 
