@@ -49,9 +49,8 @@ n1$save("n1.html", cdn=TRUE)
 ```{r warning=FALSE, message=FALSE}
 h1 <- hPlot(x = "Wr.Hnd", y = "NW.Hnd", data = MASS::survey, type = c("line", 
     "bubble", "scatter"), group = "Clap", size = "Age")
-h1$save("h1.html", cdn=TRUE)
+h1$show("iframesrc", cdn=TRUE)
 ```
-<iframe src="h1.html" height=400 width=800></iframe>
 
 ---
 
